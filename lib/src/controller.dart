@@ -232,12 +232,6 @@ class SlidableController {
     } else {
       endGesture.value = ClosingGesture(velocity.abs());
     }
-
-    // If the movement is too fast, the actionPaneConfigurator may still be
-    // null. So we have to replay the end gesture when it will not be null.
-    if (actionPaneConfigurator == null) {
-      _replayEndGesture = true;
-    }
   }
 
   /// Closes the [Slidable].
